@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-BASE_URL="${CONFIG_URL:-https://vorden.dev/config}"
+BASE_URL="${CONFIG_URL:-https://vorden.dev}"
 
 echo "==> Sabari's dotfiles installer"
 echo "==> Source: $BASE_URL"
