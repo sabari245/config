@@ -29,8 +29,8 @@ echo "==> Detected: $DISTRO"
 # =============================================================================
 
 if [ "$DISTRO" = "arch" ]; then
-    echo "==> Updating system..."
-    sudo pacman -Syu --noconfirm
+    echo "==> Syncing package database..."
+    sudo pacman -Sy --noconfirm
 
     echo "==> Installing packages..."
     sudo pacman -S --needed --noconfirm \
@@ -39,9 +39,8 @@ if [ "$DISTRO" = "arch" ]; then
         base-devel
 
 elif [ "$DISTRO" = "debian" ]; then
-    echo "==> Updating system..."
+    echo "==> Syncing package database..."
     sudo apt update
-    sudo apt upgrade -y
 
     echo "==> Installing packages..."
     sudo apt install -y \
