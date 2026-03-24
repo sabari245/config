@@ -5,7 +5,7 @@ Portable zsh + tmux + neovim config for Debian and Arch-based systems.
 ## Install
 
 ```sh
-curl -LsSf https://vorden.dev/install.sh | sh
+curl -LsSf https://vorden.dev/install.sh | bash
 ```
 
 ## What's included
