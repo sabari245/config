@@ -32,6 +32,19 @@ vim.opt.splitbelow = true -- Horizontal splits go below
 vim.opt.undofile = true -- Persistent undo
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
 
+-- OSC 52 clipboard provider for SSH/tmux remote sessions
+vim.g.clipboard = {
+	name = "OSC 52",
+	copy = {
+		["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+		["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+	},
+	paste = {
+		["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+		["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+	},
+}
+
 -- ============================================================================
 -- Basic Keymaps (non-plugin)
 -- ============================================================================
