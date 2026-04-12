@@ -94,6 +94,7 @@ alias dfh='df -h'
 alias reload='source ~/.zshrc && echo "🔄 zsh config reloaded!"'
 alias ls='eza --group-directories-first --icons=never'
 alias lg='eza --group-directories-first --icons=never --git'
+alias cc='claude --dangerously-skip-permissions'
 
 activate() {
   source "${1:-.venv}/bin/activate"
